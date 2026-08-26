@@ -1,0 +1,2 @@
+--Department Highest Salary
+select d.name "Department",e.name "Employee",e.salary "Salary" from department d join employee e on d.id = e.departmentid where e.salary =(select max(salary) from employee where departmentId = d.id);
